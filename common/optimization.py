@@ -13,12 +13,11 @@ class SGD:
             params[key] -= self.lr * grads[key]
 
 #optimizer = SGD(lr=0.94)
-#optimizer.updata(params, grads)
+#optimizer.update(params, grads)
 
 #--------------------------------------------------
 #Momentum optimizer
 class Momentum:
-    #定数はここで持たせておく(以下のメソッドの引数にしなくていい)
     def __init__(self, lr=0.01, momentum=0.9): 
         self.lr = lr
         self.momentum = momentum
@@ -37,7 +36,7 @@ class Momentum:
             self.v[key] = self.momentum * self.v[key] - self.lr * grads[key]
             params[key] += self.v[key]
 #optimizer = Momentum(lr=0.1)
-#optimizer.updata(params,grads)
+#optimizer.update(params,grads)
 
 #--------------------------------------------------
 #AdaGrad optimizer
@@ -57,7 +56,7 @@ class AdaGrad:
             self.h[key] += grads[key] * grads[key] # *:要素ごとの積
             params[key] -= self.lr * (grads[key] / (np.sqrt(self.h[key]) + 1e-7)), #h=0対策
 #optimizer = AdaGrad(lr=0.3)
-#optimizer.updata(params, grads)
+#optimizer.update(params, grads)
 
 #--------------------------------------------------
 #Adam optimizer
