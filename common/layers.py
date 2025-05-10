@@ -12,7 +12,7 @@ class MulLayer:
         self.y = None
     #順伝播
     def forward(self, x, y):
-        self.x = x #入力値を保持（sigmoidは出力を保持）
+        self.x = x 
         self.y = y
         out = x * y #入力の積をとる
         return out 
@@ -84,7 +84,6 @@ class Sigmoid:
 class Affine:
     #生成時処理
     def __init__(self, W, b): #W:(input,output), b:(output)
-        #init引数はインスタンス作成時に呼ぶ必要がある
         self.W = W
         self.b = b
         self.x = None
@@ -129,7 +128,7 @@ class SoftmaxWithLoss:
         return self.loss #->スカラ（batch毎にひとつのloss）
         
     #逆伝播
-    def backward(self, dout=1): #最終層だから∂L/∂L=1だね
+    def backward(self, dout=1): #最終層だから∂L/∂L=1
         batch_size = self.t.shape[0]
         if self.t.size == self.y.size: # 教師データがone-hot-vector(batch,class)の場合：yと一致
             dx = (self.y - self.t) / batch_size #各batchに流す勾配値（同じ重みと仮定）
