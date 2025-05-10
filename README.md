@@ -11,9 +11,10 @@ Python でレイヤーや活性化関数、損失関数、最適化アルゴリ�
 - **Conv ブロック ×3**  
   - 各ブロック内で 2 回の畳み込み＋バッチ正規化＋ReLU → プーリング
   - [Conv → BatchNorm → ReLU → Conv → BatchNorm → ReLU → Pool] × 3
+    
 - **全結合層 ×2**  
-  - 1 層目：Affine → BatchNorm → ReLU → Dropout  
-  - 2 層目：Affine → Dropout → Softmax  
+  - Affine → BatchNorm → ReLU → Dropout  
+  - Affine → Dropout → Softmax  
 
 詳細は `models/deep_CNN.py` のクラス定義コメントをご覧ください。
 
