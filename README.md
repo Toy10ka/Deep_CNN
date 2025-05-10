@@ -16,6 +16,7 @@ Python でゼロからレイヤーや活性化関数、損失関数、最適化�
 ---
 
 ## 📝 ディレクトリ構成
+```
 Deep_CNN/
 ├── common/ # 共有モジュール
 │ ├── init.py
@@ -31,6 +32,7 @@ Deep_CNN/
 ├── deep_convnet_params.pkl # 学習済みモデルパラメータ（サンプル）
 ├── README.md # このファイル
 └── requirements.txt # 必要パッケージ
+```
 
 ---
 
