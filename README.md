@@ -8,12 +8,12 @@ Python でレイヤーや活性化関数、損失関数、最適化アルゴリ�
 
 本実装の畳み込みニューラルネットワーク（DeepConvNet）は、以下のような層構成になっています。  
 
-- **Conv ブロック ×3**  
-  - [Conv → BatchNorm → ReLU → Conv → BatchNorm → ReLU → Pool] × 3
+- **Convolution ブロック ×3**  
+  - [Convolution → BatchNorm → ReLU → Convolution → BatchNorm → ReLU → Pooling] × 3
     
 - **全結合層 ×2**  
   - Affine → BatchNorm → ReLU → Dropout  
-  - Affine → Dropout → Softmax
+  - Affine → Dropout → SoftmaxWithLoss
     
 ---
 
