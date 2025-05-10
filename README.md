@@ -20,6 +20,7 @@ Python でゼロからレイヤーや活性化関数、損失関数、最適化�
 Deep_CNN/
 ├── common/ # 共有モジュール
 │ ├── init.py
+│ ├── function.py # 活性化関数・損失関数定義
 │ ├── layers.py # 自作レイヤー群
 │ ├── mnist.pkl # MNIST データセット（pickle 形式）
 │ ├── mnist.py # MNIST 取り込み・前処理用スクリプト
