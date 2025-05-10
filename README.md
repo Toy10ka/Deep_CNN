@@ -20,11 +20,10 @@ Deep_CNN/
 ├── common/ # 共有モジュール
 │ ├── init.py
 │ ├── layers.py # 自作レイヤー群
-│ ├── function.py # 活性化関数・損失関数定義
-│ ├── function.py # 活性化関数・損失関数定義
-│ ├── function.py # 活性化関数・損失関数定義
-│ ├── function.py # 活性化関数・損失関数定義
-│ └── function.py # 活性化関数・損失関数定義
+│ ├── mnist.pkl # MNIST データセット（pickle 形式）
+│ ├── mnist.py # MNIST 取り込み・前処理用スクリプト
+│ ├── optimization.py # 最適化アルゴリズム（SGD, Momentum 等）
+│ └── trainer.py # 訓練ループ・評価ロジック
 ├── models/
 │ ├── init.py
 │ └── deep_CNN.py # ネットワーク構築＆順伝播・逆伝播
