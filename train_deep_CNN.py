@@ -25,7 +25,7 @@ trainer.train()
 elapsed = time.time() - start_time
 # 経過秒を h:m:s に変換
 duration = datetime.timedelta(seconds=int(elapsed))
-print(f"学習にかかった時間は {duration} (hh:mm:ss) だよ．")
+print(f"学習にかかった時間は {duration} (hh:mm:ss) ．")
 
 #パラメータ保存
 network.save_params("deep_convnet_params.pkl")
