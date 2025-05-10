@@ -13,10 +13,8 @@ Python でレイヤーや活性化関数、損失関数、最適化アルゴリ�
     
 - **全結合層 ×2**  
   - Affine → BatchNorm → ReLU → Dropout  
-  - Affine → Dropout → Softmax  
-
-詳細は `models/deep_CNN.py` のクラス定義コメントをご覧ください。
-
+  - Affine → Dropout → Softmax
+    
 ---
 
 ## 🚀 特徴
